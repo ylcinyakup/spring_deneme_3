@@ -1,0 +1,46 @@
+<table class="table table-hover">
+	<tr></tr>
+	<tr>
+		<th>Id</th>
+		<th>Firstname</th>
+		<th>Lastname</th>
+		<th>Email</th>
+		<th>Phones</th>
+		<th>Addresses</th>
+		<th>Duzenle</th>
+		<th>Sil</th>
+	</tr>
+	<tr ng-repeat="user in users">
+		<form ng-submit="ctrl.submit()" name="myForm" class="form-horizontal">
+			<td><input type="text" ng-model="user.id" id="id"
+				class="id form-control" readonly /></td>
+			<td><input type="text" ng-model="user.firstname" id="firstname"
+				class="username form-control" /></td>
+			<td><input type="text" ng-model="user.lastname" id="lastname"
+				class="lastname form-control" /></td>
+			<td><input type="text" ng-model="user.email" id="email"
+				class="email form-control" /></td>
+			<td><a ui-sref="/users/{{user.id}}/phoneNumbers">Henuz Eklenmedi</a></td>
+			<td><a ui-sref="/users/{{user.id}}/addresses">Henuz Eklenmedi</a></td>
+			<td><button type="button" ng-click="updateUser(user.id,user)"
+					class="btn btn-primary">Duzenle</button></td>
+			<td><button type="button" ng-click="deleteUser(user.id)"
+					class="btn btn-danger">Sil</button></td>
+
+		</form>
+
+	</tr>
+	<tr>
+		<td></td>
+		<td><input type="text" ng-model="user.firstname" id="firstname"
+			class="username form-control" /></td>
+		<td><input type="text" ng-model="user.lastname" id="lastname"
+			class="lastname form-control" /></td>
+		<td><input type="text" ng-model="user.email" id="email"
+			class="email form-control" /></td>
+		<td></td>
+		<td></td>
+		<td><button type="button" ng-click="createUser(user)"
+				class="btn btn-success">Ekle</button></td>
+	</tr>
+</table>

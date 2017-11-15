@@ -1,0 +1,27 @@
+<table class="table table-hover">
+	<tr></tr>
+	<tr>
+		<th>Id</th>
+		<th>PhoneNumber</th>
+		<th>UserId</th>
+		<th>Duzenle</th>
+		<th>Sil</th>
+	</tr>
+	<tr ng-repeat="pN in phoneNumbers">
+
+		<td>{{pN.id}}</td>
+		<td>{{pN.phoneNumber}}</td>
+		<td>{{pN.user.id}}</td>
+		<td><a href="#/users/{{user.id}}/phoneNumbers">Phones</a></td>
+		<td><a href="#/users/{{user.id}}/addresses">Addresses</a></td>
+		<td><a href="#/users/{{user.id}}/phoneNumbers">Phones</a></td>
+		<td><a href="#/users/{{user.id}}/addresses">Addresses</a></td>
+	</tr>
+	<tr>
+		<td>{{user.id}}</td>
+		<td>{{user.firstname}}</td>
+		<td>{{user.lastname}}</td>
+		<td>{{user.email}}</td>
+		<td><a href="#/users/{{user.id}}/phoneNumbers">Ekle</a></td>
+	</tr>
+</table>
